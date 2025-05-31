@@ -9,7 +9,11 @@ print("GPA:", gpa)
 print("Graduated:", graduated, "\n")
 print("Analyzing your data...\n")
 
-if age < 25 and gpa >= 3.5 and graduated.lower() == "yes":
+if gpa < 0 or gpa > 4.0:
+    print("result: Invalid GPA, please enter a value between 0.0 and 4.0.\n")
+elif graduated.lower() != "yes" and graduated.lower() != "no":
+    print("result: Invalid input for graduation status, please enter 'yes' or 'no'.\n")
+elif age < 25 and gpa >= 3.5 and graduated.lower() == "yes":
     print("result: You are eligible for the scholarship!\n")
 elif age < 30 and gpa >= 2.5 and graduated.lower() == "no":
     print("result: You are eligible for the internship program!\n")
